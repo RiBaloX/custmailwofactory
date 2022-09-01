@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,7 +18,7 @@ public class CustomerMailApplication {
     /**
      * @param args the command line arguments
      */
-    private Customer customer;
+    /*private Customer customer;
     public void getCustomerTypeFromUser(String customerType) {
         switch(customerType) {
             case "Regular":
@@ -35,7 +36,7 @@ public class CustomerMailApplication {
         return customer.createMail();
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         CustomerMailApplication app = new CustomerMailApplication();
         Scanner inp = new Scanner(System.in);
         System.out.print("Please choose customer type 1. Regular, 2. Mountain, 3. Delinquent ");
@@ -53,5 +54,12 @@ public class CustomerMailApplication {
             
         }
         System.out.println(app.generateMail());        
+    }*/
+    public static void main(String[] args) { 
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Please input customer type ==> ");
+        String type = inp.next();
+        Customer app = CustomerFactory.createCustomer(type);
+        System.out.println(app.createMail());        
     }
 }
